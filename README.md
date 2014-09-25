@@ -5,6 +5,8 @@ Wrapper around 'net/ssh' to make it easier to use - uses password for sudo autom
 
 Usage
 =====
+
+```
 $:.push(File.expand_path(File.join(__FILE__, '..')))
 
 require 'ssh'
@@ -15,3 +17,4 @@ stdout, stderr = ssh.run('sudo apt-get update')
 raise "Error updating package lists: #{stderr}" unless stderr.empty?
 
 stdout.select{ |x| x.match(/Reading package lists/) }
+```
