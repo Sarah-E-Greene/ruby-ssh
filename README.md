@@ -6,6 +6,7 @@ Wrapper around 'net/ssh' to make it easier to use - uses password for sudo autom
 Usage
 =====
 $:.push(File.expand_path(File.join(__FILE__, '..')))
+
 require 'ssh'
 
 ssh = SSH.new(hostname, user, password)
